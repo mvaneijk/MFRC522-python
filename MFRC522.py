@@ -384,8 +384,8 @@ class MFRC522:
                 (backData[0] & 0x0F) == 0x0A):
             status = self.MI_ERR
 
-        print("%s backdata &0x0F == 0x0A %s" % (backLen, backData[0] & 0x0F) )
         if status == self.MI_OK:
+            print("%s backdata &0x0F == 0x0A %s" % (backLen, backData[0] & 0x0F) )
             i = 0
             buf = []
             while i < 16:
